@@ -1,0 +1,19 @@
+[package]
+name = "pendragon-website"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+axum = "0.7.3"
+shuttle-axum = { version = "0.35.2", default-features = false, features = ["axum-0-7"] }
+shuttle-runtime = {version = "0.35.2", default-features = false}
+askama = { version = "0.12.1", features = ["with-axum"] }
+askama_axum = "0.4.0"
+tokio = { version = "1.35.0", features = ["full"] }
+tower = "0.4.13"
+tower-http = { version = "0.5.0", features = ["fs"] }
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+serde = { version = "1.0.193", features = ["derive"] }
+toml = "0.8.8"
+dotenv = "0.15.0"

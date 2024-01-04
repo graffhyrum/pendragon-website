@@ -1,0 +1,7 @@
+/target
+.shuttle-storage
+Secrets*.toml
+.idea
+!.idea/runConfigurations
+.env
+bak/

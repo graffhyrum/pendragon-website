@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% let version = env!("CARGO_PKG_VERSION").to_string() %}
+<html lang="en">
+<head>
+  <title>Pendragon Portfolio</title>
+  <meta charset="UTF-8" lang="en">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="../../styles/main.css" rel="stylesheet">
+  <link href="../../styles/prism.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../favicon_io/apple-touch-icon.png">
+  <link rel="icon" sizes="32x32" href="../../favicon_io/favicon-32x32.png">
+  <link rel="icon" sizes="16x16" href="../../favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="../../favicon_io/site.webmanifest">
+  <script src="../../scripts/prism.js"></script>
+  <script src="../../scripts/htmx.min.js"></script>
+</head>
+<body>
+<header>
+  <img class="headshot" src="../../assets/headshot_sm.jpg" alt="Headshot of Joshua Pendragon">
+  <h1>Pendragon</h1>
+  {% block header %}{% endblock %}
+</header>
+<main>
+  <div class="toc">
+    <h2>{% block heading %}{% endblock %}</h2>
+    <nav>
+      <ul role="directory">
+        <li><a href="/">Home</a></li>
+        <li><a href="my_work.html">My Work</a></li>
+        <li><a href="bookshelf.html">Bookshelf</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="playground.html">Playground</a></li>
+      </ul>
+    </nav>
+    {% block toc %}{% endblock %}
+  </div>
+  <div class="content">
+    {% block content %}{% endblock %}
+  </div>
+</main>
+<footer>
+  <p> &copy 2023. Version {{ version }} All rights reserved.</p>
+  <h2>Links</h2>
+  <ul role="list">
+    <li><a target="_blank" href="https://www.linkedin.com/in/pendragonjoshuag/">LinkedIn</a></li>
+    <li><a target="_blank" href="https://github.com/graffhyrum">GitHub</a></li>
+    <li><a target="_blank" href="mailto:pendragon.josh@gmail.com">Email Me</a></li>
+  </ul>
+  {% block footer %}{% endblock %}
+
+</footer>
+</body>
+</html>
