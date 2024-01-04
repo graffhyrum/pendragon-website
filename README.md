@@ -30,6 +30,11 @@ cargo build
 cargo run
 ```
 
+## Live Reload
+
+- For style adjustments, run `npx tailwindcss -i ./styles/tailwind.css -o ./styles/styles.css --watch`
+- For everything else, run `cargo watch -x "shuttle run"`
+
 ## Built With
 
 - [Rust](https://www.rust-lang.org/)
