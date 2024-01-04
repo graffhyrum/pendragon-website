@@ -38,6 +38,7 @@ cargo run
 - [Tower](https://github.com/tower-rs/tower)
 - [htmx](https://htmx.org/)
 - [Prism](https://prismjs.com/)
+- [Shuttle.rs](https://shuttle.rs/)
 
 ## Authors
 
