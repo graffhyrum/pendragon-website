@@ -18,13 +18,11 @@
     <script src="../../scripts/htmx.min.js"></script>
 </head>
 <body class="grid grid-rows-auto grid-cols-auto h-screen m-0 text-shadow-md leading-loose font-sans box-border text-[rgb(207,207,207)]">
-<!--<body>-->
 <header class="grid grid-cols-3 items-center border border-grey-50 rounded-large">
     <img class="rounded-full" src="../../assets/headshot_sm.jpg" alt="Headshot of Joshua Pendragon">
     <h1 class="text-5xl">Joshua Pendragon</h1>
     {% block header %}{% endblock %}
 </header>
-<!--<main class="grid grid-cols-2">-->
 <main class="row-[2] grid grid-cols-[1fr_6fr] overflow-y-auto justify-items-stretch p-[1%] rounded-[10px]">
     <div class="toc p-[2%] max-w-max">
         <h2>{% block heading %}{% endblock %}</h2>

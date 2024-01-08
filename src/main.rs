@@ -17,15 +17,6 @@ async fn main() -> shuttle_axum::ShuttleAxum {
         .init();
 
     info!("Initializing Router");
-    // let addr = address::get_address();
     let router = router::build_router();
-    // info!("router initialized, now listening on http://{}", addr);
-
-
-    // let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
-    // axum::serve(listener, router)
-    //     .await
-    //     .context("error while starting server")?;
-
     Ok(router.into())
 }
