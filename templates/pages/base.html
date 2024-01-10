@@ -35,7 +35,12 @@
                 <!--                <li><a href="playground.html">Playground</a></li>-->
             </ul>
         </nav>
-        {% block toc %}{% endblock %}
+        <nav class="flex flex-col">
+            <h2>
+                Table of Contents
+            </h2>
+            {% block toc %}{% endblock %}
+        </nav>
     </div>
     <div class="overflow-y-auto w-full">
         {% block content %}{% endblock %}

@@ -593,10 +593,6 @@ video {
   height: 100vh;
 }
 
-.w-auto {
-  width: auto;
-}
-
 .w-full {
   width: 100%;
 }
@@ -656,16 +652,12 @@ video {
   justify-content: space-between;
 }
 
+.justify-items-center {
+  justify-items: center;
+}
+
 .justify-items-stretch {
   justify-items: stretch;
-}
-
-.gap-1 {
-  gap: 0.25rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
 }
 
 .gap-x-2 {
@@ -681,10 +673,6 @@ video {
 
 .divide-green-700\/80 > :not([hidden]) ~ :not([hidden]) {
   border-color: rgb(21 128 61 / 0.8);
-}
-
-.self-center {
-  align-self: center;
 }
 
 .overflow-hidden {
@@ -729,6 +717,16 @@ video {
   font-size: 0.8rem;
 }
 
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
 .leading-loose {
   line-height: 2;
 }
@@ -741,31 +739,6 @@ video {
 body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   font-family: 'Roboto', sans-serif;
-}
-
-footer ul li, .toc ul li {
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  list-style-type: none;
-  border-radius: 10px;
-  padding-left: 4%;
-  padding-right: 4%;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  background: rgba(255, 255, 255, 0.2);
-}
-
-/*main {*/
-
-/*    background: rgba(255, 255, 255, 0.2);*/
-
-/*}*/
-
-li > * {
-  padding: .5rem;
-  align-content: center;
 }
 
 pre {
@@ -826,6 +799,11 @@ h2 {
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
 
+p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .\*\:col-auto > * {
   grid-column: auto;
 }
@@ -834,21 +812,12 @@ h2 {
   display: flex;
 }
 
-.\*\:w-max > * {
-  width: -moz-max-content;
-  width: max-content;
-}
-
-.\*\:w-full > * {
-  width: 100%;
-}
-
-.\*\:w-auto > * {
-  width: auto;
-}
-
 .\*\:flex-\[auto\] > * {
   flex: auto;
+}
+
+.\*\:basis-1\/4 > * {
+  flex-basis: 25%;
 }
 
 .\*\:list-inside > * {
@@ -859,13 +828,8 @@ h2 {
   align-content: center;
 }
 
-.\*\:rounded-md > * {
-  border-radius: 0.375rem;
-}
-
-.\*\:bg-green-800 > * {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 101 52 / var(--tw-bg-opacity));
+.\*\:gap-1 > * {
+  gap: 0.25rem;
 }
 
 .\*\:px-2 > * {

@@ -7,19 +7,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-footer ul li, .toc ul li {
-    @apply list-none mx-[2%] my-[1%] px-[4%] py-[1%] rounded-[10px];
-    background: rgba(255, 255, 255, 0.2);
-}
-
-/*main {*/
-/*    background: rgba(255, 255, 255, 0.2);*/
-/*}*/
-
-li > * {
-    padding: .5rem;
-    align-content: center;
-}
 
 pre {
     @apply w-fit mx-0 my-2.5 p-2.5 rounded-[10px];
@@ -39,6 +26,11 @@ section {
     @apply flex flex-col
 }
 
+
 h2 {
     @apply px-2  self-center text-2xl underline sticky top-0 backdrop-blur-md w-full rounded-md shadow bg-green-800 ring-1 ring-slate-300/10;
+}
+
+p {
+    @apply my-2;
 }

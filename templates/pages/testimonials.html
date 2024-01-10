@@ -1,35 +1,28 @@
 {% extends "base.html" %}
 {% block heading %}Testimonials{% endblock %}
+
 {% block toc %}
-<nav>
-  <h3>
-    Table of Contents
-  </h3>
-  <ul role="directory">
-    {% for entry in entries %}
-    <li>
-      <a href="#{{ entry.title }}">{{ entry.title }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-</nav>
+{% for entry in entries %}
+<a href="#{{ entry.title }}">{{ entry.title }}</a>
+{% endfor %}
 {% endblock %}
+
 {% block content %}
 <section>
-  <p>
-    This is a collection of testimonials from people that I have worked with.
-  </p>
-  <ul role="list">
-    {% for entry in entries %}
-    <li>
-      <a target="_blank" href="{{ entry.href }}">{{ entry.title }}</a>
-      <br>
-      <p>
-        {{ entry.description }}
-      </p>
-    </li>
-    {% endfor %}
-  </ul>
+    <p>
+        This is a collection of testimonials from people that I have worked with.
+    </p>
+    <ul role="list">
+        {% for entry in entries %}
+        <li id="{{ entry.title}}">
+            <a target="_blank" href="{{ entry.href }}">{{ entry.title }}</a>
+            <br>
+            <p>
+                {{ entry.description }}
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
 
 </section>
 {% endblock %}
