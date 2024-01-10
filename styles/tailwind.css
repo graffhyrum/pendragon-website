@@ -4,7 +4,6 @@
 
 body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background: #0c290d;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -13,9 +12,9 @@ footer ul li, .toc ul li {
     background: rgba(255, 255, 255, 0.2);
 }
 
-main {
-    background: rgba(255, 255, 255, 0.2);
-}
+/*main {*/
+/*    background: rgba(255, 255, 255, 0.2);*/
+/*}*/
 
 li > * {
     padding: .5rem;
@@ -36,6 +35,10 @@ a:hover {
     outline: 3px solid #dbd9d9;
 }
 
+section {
+    @apply flex flex-col
+}
+
 h2 {
-    @apply text-2xl
+    @apply px-2  self-center text-2xl underline sticky top-0 backdrop-blur-md w-full rounded-md shadow bg-green-800 ring-1 ring-slate-300/10;
 }
