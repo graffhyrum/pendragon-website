@@ -10,7 +10,7 @@ pub async fn my_work() -> impl IntoResponse {
                 content: vec![
                     ContentEntry {
                         title: "This Website",
-                        href: "/",
+                        href: "https://github.com/graffhyrum/portfolio_rs",
                         content: "This website is built using Rust, Axum, and Askama.",
                     },
                     ContentEntry {
