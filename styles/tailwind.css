@@ -35,3 +35,7 @@ a:hover {
     text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
     outline: 3px solid #dbd9d9;
 }
+
+h2 {
+    @apply text-2xl
+}

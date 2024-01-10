@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -598,10 +598,6 @@ video {
   max-width: max-content;
 }
 
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -739,6 +735,11 @@ a:hover {
   color: rgba(255,255,255,0.7);
   text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
   outline: 3px solid #dbd9d9;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .\*\:col-auto > * {
