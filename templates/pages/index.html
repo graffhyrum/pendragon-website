@@ -1,54 +1,33 @@
 {% extends "pages/base.html" %}
 {% block heading %}Home{% endblock %}
+
+{% block toc %}
+<a href="#top-skills">Top Skills</a>
+<a href="#about">About</a>
+{% endblock %}
+
 {% block content %}
 <section>
-    <h2>Top Skills</h2>
-    <ul role="list" class="flex flex-wrap justify-between *:flex-[auto]
-  *:list-inside *:flex *:content-center ">
+    <h2 id="top-skills">Top Skills</h2>
+    <ul role="list" class="flex flex-wrap justify-between justify-items-center *:flex-[auto]
+  *:list-inside *:flex *:content-center  *:basis-1/4 *:gap-1">
+        {% for skill in skills%}
         <li>
-            <img src="../../assets/ts_logo.png" alt="Typescript Logo">
-            <p><a href="https://www.typescriptlang.org/">Typescript</a></p>
+            <img src="../../assets/{{ skill.img_src }}" alt="{{ skill.img_alt }}">
+            <p>
+                {% match skill.skill_doc_link %}
+                {% when Some with (val) %}
+                <a href="{{ val }}">{{ skill.title }}</a>
+                {% when None %}
+                {{ skill.title }}
+                {% endmatch %}
+            </p>
         </li>
-        <li>
-            <img src="../../assets/playwright-logo.png" alt="Playwright Logo">
-            <p><a href="https://playwright.dev/">Playwright</a></p>
-        </li>
-        <li>
-            <img src="../../assets/automation.png" alt="Test Automation Icon">
-            <p>Test Automation</p>
-        </li>
-        <li>
-            <img src="../../assets/documentation.png" alt="Documentation icon">
-            <p>Documentation</p>
-        </li>
-        <li>
-            <img src="../../assets/process_improvement.png" alt="Process Improvement Icon">
-            <p>Process Improvement</p>
-        </li>
-        <li>
-            <img src="../../assets/planning.png" alt="Strategic Planning Icon">
-            <p>Strategic Planning</p>
-        </li>
-        <li>
-            <img src="../../assets/leadership.png" alt="Communication Icon">
-            <p>Team Leadership</p>
-        </li>
-        <li>
-            <img src="../../assets/project_management.png" alt="Jira Logo">
-            <p><a href="https://www.atlassian.com/software/jira">Project Management</a></p>
-        </li>
-        <li>
-            <img src="../../assets/public_speaking.png" alt="Public Speaking Icon">
-            <p>Public Speaking</p>
-        </li>
-        <li>
-            <img src="../../assets/accessibility.png" alt="Accessibility Icon">
-            <p>Accessibility</p>
-        </li>
+        {% endfor %}
     </ul>
 </section>
 <section>
-    <h2>About</h2>
+    <h2 id="about">About</h2>
     <p>
         My name is Joshua Pendragon, and I am an experienced SDET with over eight years of experience in ensuring
         software
