@@ -24,7 +24,7 @@
     {% block header %}{% endblock %}
 </header>
 <main class="relative grow h-max m-1 overflow-hidden row-[2] grid grid-cols-[1fr_6fr]  justify-items-stretch p-[1%]">
-    <div class="overflow-y-auto p-[2%] max-w-max">
+    <div class="overflow-y-auto p-[2%] max-w-max" data-testid="NavTree">
         <h2>{% block heading %}{% endblock %}</h2>
         <nav>
             <ul class="flex flex-col items-start p-0" role="directory">

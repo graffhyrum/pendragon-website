@@ -1,18 +1,34 @@
-import { test, expect } from '@playwright/test';
+import {expect, test} from '@playwright/test';
+import {goToPage, pages} from "./pages";
 
-test('has title', async ({ page }) => {
-  await page.goto('/');
-
-  // Expect a title "to contain" a substring.
-  await expect(page).toHaveTitle(/Pendragon Portfolio/);
+test('has title', async ({page}) => {
+    await goToPage(page, 'Home');
+    await expect(page).toHaveTitle(/Pendragon Portfolio/);
 });
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+test('check routes', async ({page}) => {
+    await goToPage(page, 'Home');
+    for (const route of pages) {
+        await goToPage(page, route.name);
+        await expect(async () => {
+            expect(page.url(), `Page ${route.name} did not load correctly`)
+                .toMatch(route.url)
+        }).toPass()
+        await expect(page.getByRole('heading', {name: route.name}))
+            .toBeVisible()
+    }
 });
+
+test('check links', async ({page}) => {
+    await goToPage(page, 'Home');
+    for (const route of pages) {
+        const navLink = page
+            .getByTestId('NavTree')
+            .locator('a', {hasText: route.name})
+        await expect(navLink, `Link with name ${route.name} not visible.`).toBeVisible()
+        await navLink.click()
+        await expect(page.url(),
+            `Url for ${route.name} should match ${route.url}, but didn't.`
+        ).toMatch(route.url)
+    }
+})
