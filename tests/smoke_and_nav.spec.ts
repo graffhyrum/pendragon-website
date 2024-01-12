@@ -1,5 +1,5 @@
 import {expect, test} from '@playwright/test';
-import {goToPage, pages} from "./pages";
+import {goToPage, pages} from "../tests-src/pages";
 
 test('has title', async ({page}) => {
     await goToPage(page, 'Home');
@@ -25,10 +25,10 @@ test('check links', async ({page}) => {
         const navLink = page
             .getByTestId('NavTree')
             .locator('a', {hasText: route.name})
-        await expect(navLink, `Link with name ${route.name} not visible.`).toBeVisible()
+        await expect(navLink, `Link with name ${route.name} should be visible.`).toBeVisible()
         await navLink.click()
         await expect(page.url(),
-            `Url for ${route.name} should match ${route.url}, but didn't.`
+            `Url for ${route.name} should match ${route.url}.`
         ).toMatch(route.url)
     }
 })
