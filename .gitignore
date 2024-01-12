@@ -5,3 +5,8 @@ Secrets*.toml
 !.idea/runConfigurations
 .env
 bak/
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
