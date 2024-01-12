@@ -1,13 +1,8 @@
-import {expect, test} from '@playwright/test';
+import {expect} from '@playwright/test';
+import {test} from "../tests-src/fixture_builder";
 import {goToPage, pages} from "../tests-src/pages";
 
-test('has title', async ({page}) => {
-    await goToPage(page, 'Home');
-    await expect(page).toHaveTitle(/Pendragon Portfolio/);
-});
-
 test('check routes', async ({page}) => {
-    await goToPage(page, 'Home');
     for (const route of pages) {
         await goToPage(page, route.name);
         await expect(async () => {
@@ -20,7 +15,6 @@ test('check routes', async ({page}) => {
 });
 
 test('check links', async ({page}) => {
-    await goToPage(page, 'Home');
     for (const route of pages) {
         const navLink = page
             .getByTestId('NavTree')
