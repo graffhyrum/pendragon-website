@@ -45,11 +45,5 @@ export default defineConfig({
       use: { ...devices['Desktop Firefox'] },
     },
   ],
-
-  /* Run your local dev server before starting the tests */
-  webServer: {
-    command: 'cargo watch -x "shuttle run"',
-    url: baseURL,
-    reuseExistingServer: !process.env.CI,
-  },
+  
 });
