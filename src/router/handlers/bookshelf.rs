@@ -29,8 +29,29 @@ pub async fn bookshelf() -> impl IntoResponse {
                         href: "https://htmx.org/essays/locality-of-behaviour/",
                         description: "An article on the tradeoffs of Separation of Concerns and Locality of Behavior.",
                     },
+                    ContentEntry {
+                        title: "The Website vs. Web App Dichotomy Doesn't Exist",
+                        href: "https://jakelazaroff.com/words/the-website-vs-web-app-dichotomy-doesnt-exist",
+                        description: "An analysis of websites across two axes: Static vs Dynamic & Online vs Offline."
+                    }
                 ],
             },
+            Section {
+                title: "Cool Tools",
+                subtitle: "Tools I like to use or think are interesting",
+                content: vec![
+                    ContentEntry {
+                        title: "Photopea",
+                        href: "https://www.photopea.com/",
+                        description: "Free photo editing in the browser."
+                    },
+                    ContentEntry {
+                        title: "Obsidian",
+                        href: "https://obsidian.md/",
+                        description: "Obsidian is the private and flexible writing app that adapts to the way you think."
+                    }
+                ]
+            }
         ],
     }
 }
