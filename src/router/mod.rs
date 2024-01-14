@@ -14,7 +14,6 @@ async fn fallback() -> (StatusCode, &'static str) {
     (StatusCode::NOT_FOUND, "Not Found")
 }
 
-
 pub fn build_router() -> Router {
     let assets_path_buff = std::env::current_dir().expect(
         "Failed to get current directory"

@@ -10,7 +10,7 @@ pub async fn my_work() -> impl IntoResponse {
                 content: vec![
                     ContentEntry {
                         title: "This Website",
-                        href: "https://github.com/graffhyrum/portfolio_rs",
+                        href: "https://github.com/graffhyrum/pendragon-website",
                         content: "This website is built using Rust, Axum, and Askama.",
                     },
                     ContentEntry {
@@ -43,7 +43,7 @@ your test suite against all enabled environments, and a teardown project. ",
                     ContentEntry {
                         title: "Typescript - Recursive Partial Type",
                         href: "https://gist.github.com/graffhyrum/7f267cea2021ad4246be23ec5f6d4a4e",
-                        content: r#"<script src="https://gist.github.com/graffhyrum/7f267cea2021ad4246be23ec5f6d4a4e.js"></script>                        "#,
+                        content: r#"<script src="https://gist.github.com/graffhyrum/7f267cea2021ad4246be23ec5f6d4a4e.js"></script>"#,
                     },
                     ContentEntry {
                         title: "Typescript - 'One of' Type",
