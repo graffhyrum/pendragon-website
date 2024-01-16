@@ -17,6 +17,17 @@ pub async fn shoutouts() -> impl IntoResponse {
                         description: "My favorite VIM content creator and second favorite coding sh*tposter. BTW he works at Netflix, just so you know... Netflix btw... =D",
                     },
                     ContentEntry {
+                        title: "Fireship",
+                        link: vec![Link {
+                            title: "Main Website",
+                            href: "https://fireship.io/",
+                        }, Link {
+                            title: "Youtube",
+                            href: "https://www.youtube.com/c/fireship",
+                        }],
+                        description: "Succinct and entertaining tech news and code tutorials.",
+                    },
+                    ContentEntry {
                         title: "Robert Martin AKA Uncle Bob",
                         link: vec![Link {
                             title: "Wiki Page",
@@ -47,6 +58,17 @@ pub async fn shoutouts() -> impl IntoResponse {
                             href: "https://jeremychone.com/",
                         }],
                         description: "My second favorite Rust content creator (sorry again, Prime. You got the first entry in the list, don't be mad.). I would have taken WAY longer to make this site without his content.",
+                    },
+                    ContentEntry {
+                        title: "Kai Lentit AKA Programmers are also human",
+                        link: vec![Link {
+                            title: "Twitter/X",
+                            href: "https://twitter.com/kailentit",
+                        }, Link {
+                            title: "Youtube",
+                            href: "https://www.youtube.com/@programmersarealsohuman5909",
+                        }],
+                        description: "Satirical Developer 'interviews'",
                     },
                     ContentEntry {
                         title: "Gleb Bahmutov",
