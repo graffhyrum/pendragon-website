@@ -13,24 +13,26 @@
     <h2>
         {{ section.title }}
     </h2>
-    <p>
-        {{ section.subtitle }}
-    </p>
-    <ul class="flex flex-wrap max-w-max mr-8" role="list">
-        {% for entry in section.content %}
-        <li class="outline outline-2 outline-green-700 w-full max-w-prose m-4 p-2 rounded-lg">
-            <h3 class="text-3xl underline">{{entry.title}}</h3>
-            {% for link in entry.link %}
-            <a class="text-xl" target="_blank" href="{{ link.href }}">{{
-                link.title }}</a>
-            <br>
+    <div class="text-xl">
+        <p>
+            {{ section.subtitle }}
+        </p>
+        <ul class="flex flex-wrap max-w-max mr-8" role="list">
+            {% for entry in section.content %}
+            <li class="outline outline-2 outline-green-700 w-full max-w-prose m-4 p-2 rounded-lg">
+                <h3 class="text-3xl underline">{{entry.title}}</h3>
+                {% for link in entry.link %}
+                <a class="text-xl" target="_blank" href="{{ link.href }}">{{
+                    link.title }}</a>
+                <br>
+                {% endfor %}
+                <p class="text-lg">
+                    {{ entry.description }}
+                </p>
+            </li>
             {% endfor %}
-            <p class="text-lg">
-                {{ entry.description }}
-            </p>
-        </li>
-        {% endfor %}
-    </ul>
+        </ul>
+    </div>
 </section>
 {% endfor %}
 {% endblock %}

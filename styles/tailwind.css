@@ -28,7 +28,7 @@ section {
 
 
 h2 {
-    @apply px-2  self-center text-2xl underline sticky top-0 backdrop-blur-md w-full rounded-md shadow bg-green-800 ring-1 ring-slate-300/10;
+    @apply p-2 my-2  self-center text-2xl underline sticky top-0 backdrop-blur-md w-full rounded-md shadow bg-green-800 ring-1 ring-slate-300/10;
 }
 
 p {

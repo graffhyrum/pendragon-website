@@ -9,20 +9,24 @@
 
 {% block content %}
 <section>
-    <p>
-        This is a collection of testimonials from people that I have worked with.
-    </p>
-    <ul role="list">
-        {% for entry in entries %}
-        <li id="{{ entry.title}}">
-            <a target="_blank" href="{{ entry.href }}">{{ entry.title }}</a>
-            <br>
-            <p>
-                {{ entry.description }}
-            </p>
-        </li>
-        {% endfor %}
-    </ul>
-
+    <h2>
+        Testimonials
+    </h2>
+    <div class="text-xl">
+        <p>
+            This is a collection of testimonials from people that I have worked with.
+        </p>
+        <ul class="flex flex-wrap max-w-max mr-8" role="list">
+            {% for entry in entries %}
+            <li class="outline outline-2 outline-green-700 w-full max-w-prose m-4 p-2 rounded-lg" id="{{ entry.title}}">
+                <a target="_blank" href="{{ entry.href }}">{{ entry.title }}</a>
+                <br>
+                <p>
+                    {{ entry.description }}
+                </p>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </section>
 {% endblock %}

@@ -564,38 +564,12 @@ video {
   margin: 0.25rem;
 }
 
-.m-\[2\%\] {
-  margin: 2%;
-}
-
-.m-2 {
-  margin: 0.5rem;
-}
-
 .m-4 {
   margin: 1rem;
 }
 
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
-.mx-5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-}
-
-.ml-2 {
-  margin-left: 0.5rem;
-}
-
-.ml-5 {
-  margin-left: 1.25rem;
-}
-
-.mr-10 {
-  margin-right: 2.5rem;
+.m-\[2\%\] {
+  margin: 2%;
 }
 
 .mr-8 {
@@ -641,11 +615,6 @@ video {
   width: min-content;
 }
 
-.w-fit {
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
 .max-w-max {
   max-width: -moz-max-content;
   max-width: max-content;
@@ -655,17 +624,8 @@ video {
   max-width: 65ch;
 }
 
-.max-w-screen-lg {
-  max-width: 1024px;
-}
-
-.max-w-fit {
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.max-w-full {
-  max-width: 100%;
+.shrink {
+  flex-shrink: 1;
 }
 
 .grow {
@@ -739,36 +699,16 @@ video {
   overflow-y: auto;
 }
 
+.scroll-smooth {
+  scroll-behavior: smooth;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
 
 .rounded-lg {
   border-radius: 0.5rem;
-}
-
-.border-solid {
-  border-style: solid;
-}
-
-.border-green-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(134 239 172 / var(--tw-border-opacity));
-}
-
-.border-slate-300 {
-  --tw-border-opacity: 1;
-  border-color: rgb(203 213 225 / var(--tw-border-opacity));
-}
-
-.border-slate-100 {
-  --tw-border-opacity: 1;
-  border-color: rgb(241 245 249 / var(--tw-border-opacity));
-}
-
-.border-slate-800 {
-  --tw-border-opacity: 1;
-  border-color: rgb(30 41 59 / var(--tw-border-opacity));
 }
 
 .bg-green-950 {
@@ -837,18 +777,6 @@ video {
   outline-width: 2px;
 }
 
-.outline-green-300 {
-  outline-color: #86efac;
-}
-
-.outline-green-500 {
-  outline-color: #22c55e;
-}
-
-.outline-green-600 {
-  outline-color: #16a34a;
-}
-
 .outline-green-700 {
   outline-color: #15803d;
 }
@@ -894,13 +822,14 @@ section {
 h2 {
   position: sticky;
   top: 0px;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   width: 100%;
   align-self: center;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
   background-color: rgb(22 101 52 / var(--tw-bg-opacity));
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 0.5rem;
   font-size: 1.5rem;
   line-height: 2rem;
   text-decoration-line: underline;

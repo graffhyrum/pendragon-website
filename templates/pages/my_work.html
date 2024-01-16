@@ -13,18 +13,20 @@
     <h2>
         {{ section.title }}
     </h2>
-    <p>
-        {{ section.subtitle }}
-    </p>
-    <ul class="divide-y divide-green-700/80">
-        {% for entry in section.content %}
-        <li>
-            <a target="_blank" href="{{ entry.href }}">{{ entry.title }}</a>
-            <br>
-            {{ entry.content|safe }}
-        </li>
-        {% endfor %}
-    </ul>
+    <div class="text-xl">
+        <p>
+            {{ section.subtitle }}
+        </p>
+        <ul class="flex flex-wrap max-w-max mr-8">
+            {% for entry in section.content %}
+            <li class="outline outline-2 outline-green-700 w-full max-w-prose m-4 p-2 rounded-lg">
+                <a target="_blank" href="{{ entry.href }}">{{ entry.title }}</a>
+                <br>
+                {{ entry.content|safe }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </section>
 {% endfor %}
 {% endblock %}

@@ -13,12 +13,13 @@
     <h2>
         {{ section.title }}
     </h2>
+    <div class="text-xl">
     <p>
         {{ section.subtitle }}
     </p>
-    <ul role="list">
+    <ul class="flex flex-wrap max-w-max mr-8" role="list">
         {% for entry in section.content %}
-        <li>
+        <li class="outline outline-2 outline-green-700 w-full max-w-prose m-4 p-2 rounded-lg">
             <a class="text-xl" target="_blank" href="{{ entry.href }}">{{ entry.title }}</a>
             <br>
             <p class="text-lg">
@@ -27,6 +28,7 @@
         </li>
         {% endfor %}
     </ul>
+    </div>
 </section>
 {% endfor %}
 {% endblock %}
