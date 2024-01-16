@@ -7,7 +7,7 @@ use crate::router::handlers::{
     index::index,
     my_work::my_work,
     testimonials::testimonial,
-    playground::playground};
+    shoutouts::shoutouts};
 use axum::http::StatusCode;
 
 async fn fallback() -> (StatusCode, &'static str) {
@@ -27,7 +27,7 @@ pub fn build_router() -> Router {
         .route("/my_work.html", get(my_work))
         .route("/bookshelf.html", get(bookshelf))
         .route("/testimonials.html", get(testimonial))
-        .route("/playground.html", get(playground))
+        .route("/shoutouts.html", get(shoutouts))
         .fallback(fallback);
 
     let services = Router::new()

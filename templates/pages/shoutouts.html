@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block heading %}Shoutouts{% endblock %}
+
+{% block toc %}
+{% for section in sections %}
+<a href="#{{ section.title }}">{{ section.title }}</a>
+{% endfor %}
+{% endblock %}
+
+{% block content %}
+{% for section in sections %}
+<section>
+    <h2>
+        {{ section.title }}
+    </h2>
+    <p>
+        {{ section.subtitle }}
+    </p>
+    <ul role="list">
+        {% for entry in section.content %}
+        <li>
+            <h3 class="text-3xl underline">{{entry.title}}</h3>
+            {% for link in entry.link %}
+            <a class="text-xl" target="_blank" href="{{ link.href }}">{{ link.title }}</a>
+            <br>
+            {% endfor %}
+            <p class="text-lg">
+                {{ entry.description }}
+            </p>
+        </li>
+        {% endfor %}
+    </ul>
+</section>
+{% endfor %}
+{% endblock %}

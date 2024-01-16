@@ -708,6 +708,11 @@ video {
   padding: 2%;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -734,6 +739,10 @@ video {
 .text-\[rgb\(207\2c 207\2c 207\)\] {
   --tw-text-opacity: 1;
   color: rgb(207 207 207 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 body {
