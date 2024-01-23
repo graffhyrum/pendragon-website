@@ -18,49 +18,49 @@
     <script src="../../scripts/htmx.min.js"></script>
 </head>
 <body class="bg-green-950 flex flex-col h-screen m-0 text-shadow-md leading-loose font-sans box-border text-[rgb(207,207,207)] divide-y divide-green-700/80">
-<header class="h-max p-2 grid grid-cols-3 items-center">
-    <img class="rounded-full"
-         src="../../assets/headshot_sm.jpg"
-         alt="Headshot of Joshua Pendragon"
-         data-testid="Headshot"
-    >
-    <h1 class="text-5xl">Joshua Pendragon</h1>
-    {% block header %}{% endblock %}
-</header>
-<main class="relative grow h-max m-1 overflow-hidden row-[2] grid grid-cols-[1fr_6fr]  justify-items-stretch p-[1%]">
-    <div class="overflow-y-auto p-[2%] max-w-max" data-testid="NavTree">
-        <h2>{% block heading %}{% endblock %}</h2>
-        <nav>
-            <ul class="flex flex-col items-start p-0" role="directory">
-                <li><a href="/">Home</a></li>
-                <li><a href="my_work.html">My Work</a></li>
-                <li><a href="bookshelf.html">Bookshelf</a></li>
-                <li><a href="testimonials.html">Testimonials</a></li>
-                <li><a href="shoutouts.html">Shoutouts</a></li>
-            </ul>
-        </nav>
-        <nav class="flex flex-col">
-            <h2>
-                Table of Contents
-            </h2>
-            {% block toc %}{% endblock %}
-        </nav>
-    </div>
-    <div class="overflow-y-auto w-full">
-        {% block content %}{% endblock %}
-    </div>
-</main>
-<footer class="h-max *:col-auto flex flex-row justify-end items-center">
-    <p class="text-[0.8rem] w-max m-[2%]"> Est. 2023. Version {{ version }} All rights reserved.</p>
-    <div class="flex flex-row gap-x-2">
-        <h2 class="w-min">Links</h2>
-        <nav class="flex items-center *:px-2 *:text-xl ">
-            <a target="_blank" href="https://www.linkedin.com/in/pendragonjoshuag/">LinkedIn</a>
-            <a target="_blank" href="https://github.com/graffhyrum">GitHub</a>
-            <a target="_blank" href="mailto:pendragon.josh@gmail.com">Email Me</a>
-        </nav>
-    </div>
-    {% block footer %}{% endblock %}
-</footer>
+    <header class="h-max p-2 grid grid-cols-3 items-center">
+        <img class="rounded-full"
+             src="../../assets/headshot_sm.jpg"
+             alt="Headshot of Joshua Pendragon"
+             data-testid="Headshot"
+        >
+        <h1 class="text-5xl">Joshua Pendragon</h1>
+        {% block header %}{% endblock %}
+    </header>
+    <main class="relative grow h-max m-1 overflow-hidden row-[2] grid grid-cols-[1fr_6fr]  justify-items-stretch p-[1%]">
+        <div class="overflow-y-auto p-[2%] max-w-max" data-testid="NavTree">
+            <h2>{% block heading %}{% endblock %}</h2>
+            <nav>
+                <ul class="flex flex-col items-start p-0" role="directory">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="my_work.html">My Work</a></li>
+                    <li><a href="bookshelf.html">Bookshelf</a></li>
+                    <li><a href="testimonials.html">Testimonials</a></li>
+                    <li><a href="shoutouts.html">Shoutouts</a></li>
+                </ul>
+            </nav>
+            <nav class="flex flex-col">
+                <h2>
+                    Table of Contents
+                </h2>
+                {% block toc %}{% endblock %}
+            </nav>
+        </div>
+        <div class="overflow-y-auto w-full">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    <footer class="h-max *:col-auto flex flex-row justify-end items-center">
+        <p class="text-[0.8rem] w-max m-[2%]"> Est. 2023. Version {{ version }} All rights reserved.</p>
+        <div class="flex flex-row gap-x-2">
+            <h2 class="w-min">Links</h2>
+            <nav class="flex items-center *:px-2 *:text-xl ">
+                <a target="_blank" href="https://www.linkedin.com/in/pendragonjoshuag/">LinkedIn</a>
+                <a target="_blank" href="https://github.com/graffhyrum">GitHub</a>
+                <a target="_blank" href="mailto:pendragon.josh@gmail.com">Email Me</a>
+            </nav>
+        </div>
+        {% block footer %}{% endblock %}
+    </footer>
 </body>
 </html>
